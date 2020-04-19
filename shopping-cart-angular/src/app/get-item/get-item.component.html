@@ -1,0 +1,26 @@
+<div class="col-md-6">
+  <h2> Shopping Cart</h2>
+  <button class="btn btn-danger" (click)="addCard()"> Add employee</button>
+  <input #value type="text" placeholder="SearchText">
+  <table class="table table-striped">
+  <thead>
+  <tr>
+    <th class="hidden">Id</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Id</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr background-greyColor *ngFor="let item of Items | searchCard:item:value ">
+    <td class="hidden"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><button class="btn btn-danger" (click)="deletCard(item)"> Delete</button>
+    <button class="btn btn-danger" (click)="editCard(item)" style="margin-left: 20px;"> Edit</button></td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
